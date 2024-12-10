@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <script src="conversion.js" defer></script>
+    <title>Conversion</title>
+</head>
+<body>
+    <h1>Unit Conversion</h1>
+    
+    <nav id="navigation">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Conversion.html">Conversion</a></li>
+            <li><a href="TaxCalculator.html">Income Tax Calculator</a></li>
+            <li><a href="Looping.html">Factorial</a></li>
+            <li><a href="Payroll.html">Simple Payroll</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Enclosing the content in a box -->
+    <div class="conversion-box">
+        <main>
+            <section id="conversion-section">
+                <label for="choice"><h1>Select Conversion:</h1></label>
+                <select id="choice">
+                    <option value="1">Fahrenheit to Celsius</option>
+                    <option value="2">Celsius to Fahrenheit</option>
+                    <option value="3">Meter to Feet</option>
+                    <option value="4">Feet to Meter</option>
+                </select>
+                <br><br>
+                <label for="num">Enter Value:</label>
+                <input type="number" id="num" placeholder="Enter value here...">
+                <br><br>
+                <br><br>
+                <p id="convertLabel"></p>
+                <input type="text" id="convertedVal" readonly>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

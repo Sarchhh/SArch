@@ -1,0 +1,248 @@
+/* General Reset and Layout Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #6a4c9c; /* Gradient purple */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    justify-content: flex-start; /* Ensure content is aligned to the top */
+}
+
+/* Navigation Bar */
+#navigation {
+    width: 100%;
+    background-color: #333;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure navbar stays on top */
+}
+
+#navigation ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: none;
+}
+
+#navigation li {
+    display: inline;
+}
+
+#navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+#navigation a:hover {
+    background-color: indigo;
+}
+
+/* Hero Section */
+#hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    background: linear-gradient(to right, #8e44ad, #6a4c9c);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    margin-top: 80px; /* Adjusted to prevent overlap with navbar */
+}
+
+#hero h1 {
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#hero button {
+    background-color: #ff6347;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#hero button:hover {
+    background-color: #e55347;
+}
+
+/* Common Box Styling */
+.box, .conversion-box, .payroll-container, .tax-calculator-box, .factorial-box {
+    background-color: #ffffff;
+    margin: 100px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.payroll-container {
+    margin-top: 150px;
+    background-color: rgba(255, 255, 255, 0.2);
+    max-width: 1000px;
+    z-index: 500;
+    position: relative;
+}
+
+/* Form and Table Styling */
+form input,
+#conversion-section input,
+#conversion-section select,
+.tax-calculator-box input,
+.factorial-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Readonly Input Styling */
+.tax-calculator-box input[readonly],
+.factorial-box input[readonly] {
+    background-color: #f9f9f9;
+}
+
+/* Title Styling */
+.tax-calculator-box h1, .factorial-box h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #6a4c9c;
+}
+
+/* Label Styling */
+.tax-calculator-box label, .factorial-box label {
+    display: block;
+    font-size: 1.1em;
+    margin: 15px 0 5px;
+    color: #333;
+    text-align: left;
+}
+
+/* Buttons */
+button, .tax-calculator-box button, .factorial-box button {
+    padding: 10px 20px;
+    background-color: #6a4c9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, .tax-calculator-box button:hover, .factorial-box button:hover {
+    background-color: #8e44ad;
+}
+
+/* Dialog */
+.dialog {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.dialog button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #6a4c9c;
+}
+
+.dialog button:hover {
+    background-color: #8e44ad;
+}
+
+/* Additional Utility Styling */
+.factorial-box .result, .tax-calculator-box .result {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* General Table Styling */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+/* Table Header */
+th {
+    padding: 12px;
+    background-color: #6a4c9c; /* Matching the navbar */
+    color: white;
+    font-size: 1.1em;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px 8px 0 0; /* Rounded top corners */
+}
+
+/* Table Data Cells */
+td {
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+/* Row Hover Effect */
+tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styling for Smaller Screens (Responsive Design) */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+/* Zebra Stripes for Even Rows */
+tr:nth-child(even) td {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Borders for Table */
+table, th, td {
+    border: 1px solid #ddd;
+}
+
